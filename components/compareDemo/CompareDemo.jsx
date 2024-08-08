@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils";
 import { IconDotsVertical } from "@tabler/icons-react";
 import Social from "../socialMedia/Social";
 import Image from "next/image";
-
+import TypewriterEffectSmoothDemo from './TypewriterEffectSmoothDemo'
 export const Compare = ({
   firstImage = "",
   secondMediaContent = null,
@@ -234,17 +234,12 @@ const MemoizedSparklesCore = React.memo(SparklesCore);
 
 export function CompareDemo() {
   return (
-    <div className="p-4 border rounded-3xl dark:bg-neutral-900 bg-neutral-100 border-neutral-200 dark:border-neutral-800 px-4">
+    <div className="p-4 border rounded-3xl dark:bg-neutral-900 bg-neutral-100 border-neutral-200 dark:border-neutral-800 px-4 ">
       <Compare
         firstImage="/mainPhoto.png"
         secondMediaContent={<div dir="rtl" className="p-6 text-black h-full flex flex-col justify-center items-start">
-          <h1 className="text-3xl">שאדי מטאנס</h1>
-          <div className="text-2xl flex flex-col md:flex-row md:gap-2"><h2>יועץ ומשווק נדל&quot;ן</h2>
-          <h2> באזור חיפה.</h2></div>
-          <p>עם שנים של ניסיון וידע מעמיק בשוק המקומי, שאדי מחויב לעזור לך למצוא את הנכס המושלם שמתאים לצרכים שלך. </p>
-          <p>בין אם אתה קונה, מוכר או משקיע, שאדי מציע שירות אישי והכוונה מקצועית בכל שלב בדרך. </p>
-          <p>בואו נעשה את המסע שלך בנדל&quot;ן בחיפה לחלק ויעיל.</p>
-        </div>} // Replace with your HTML content
+         <TypewriterEffectSmoothDemo />
+           </div>} // Replace with your HTML content
         firstImageClassName="object-cover lg:object-left-top object-center"
         secondMediaClassName="object-cover "
         className="h-[80dvh] w-full"
