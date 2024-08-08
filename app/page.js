@@ -4,9 +4,9 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <>
+    <div className="max-h-[100dvh]">
     <CompareDemo />
     <Social />
-    </>
+    </div>
   );
 }
