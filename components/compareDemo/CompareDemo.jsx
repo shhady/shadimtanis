@@ -243,7 +243,7 @@ export function CompareDemo() {
           <h2> באזור חיפה.</h2></div>
           <p>עם שנים של ניסיון וידע מעמיק בשוק המקומי, שאדי מחויב לעזור לך למצוא את הנכס המושלם שמתאים לצרכים שלך. </p>
           <p>בין אם אתה קונה, מוכר או משקיע, שאדי מציע שירות אישי והכוונה מקצועית בכל שלב בדרך. </p>
-          <p>בואו נעשה את המסע שלך בנדל"ן בחיפה לחלק ויעיל.</p>
+          <p>בואו נעשה את המסע שלך בנדל&quotן בחיפה לחלק ויעיל.</p>
         </div>} // Replace with your HTML content
         firstImageClassName="object-cover lg:object-left-top object-center"
         secondMediaClassName="object-cover "
