@@ -239,11 +239,11 @@ export function CompareDemo() {
         firstImage="/mainPhoto.png"
         secondMediaContent={<div dir="rtl" className="p-6 text-black h-full flex flex-col justify-center items-start">
           <h1 className="text-3xl">שאדי מטאנס</h1>
-          <div className="text-2xl flex flex-col md:flex-row md:gap-2"><h2>יועץ ומשווק נדל&nbsp;&quot;ן</h2>
+          <div className="text-2xl flex flex-col md:flex-row md:gap-2"><h2>יועץ ומשווק נדל&quot;ן</h2>
           <h2> באזור חיפה.</h2></div>
           <p>עם שנים של ניסיון וידע מעמיק בשוק המקומי, שאדי מחויב לעזור לך למצוא את הנכס המושלם שמתאים לצרכים שלך. </p>
           <p>בין אם אתה קונה, מוכר או משקיע, שאדי מציע שירות אישי והכוונה מקצועית בכל שלב בדרך. </p>
-          <p>בואו נעשה את המסע שלך בנדל&nbsp;&quot;ן בחיפה לחלק ויעיל.</p>
+          <p>בואו נעשה את המסע שלך בנדל&quot;ן בחיפה לחלק ויעיל.</p>
         </div>} // Replace with your HTML content
         firstImageClassName="object-cover lg:object-left-top object-center"
         secondMediaClassName="object-cover "
