@@ -5,6 +5,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 import { IconDotsVertical } from "@tabler/icons-react";
 import Social from "../socialMedia/Social";
+import Image from "next/image";
 
 export const Compare = ({
   firstImage = "",
@@ -181,7 +182,9 @@ export const Compare = ({
               }}
               transition={{ duration: 0 }}
             >
-              <img
+              <Image
+              width={1000}
+              height={1000}
                 alt="first image"
                 src={firstImage}
                 className={cn(
@@ -198,11 +201,11 @@ export const Compare = ({
   {isSecondMediaHtml && secondMediaContent ? (
     <motion.div
       className={cn(
-        "absolute top-0 left-0 z-[19] rounded-2xl w-full h-full select-none",
+        "absolute top-0 right-0 z-[19] rounded-2xl w-full h-full select-none", // Changed to 'right-0' for positioning
         secondMediaClassName
       )}
       style={{
-        clipPath: `inset(0 0 0 ${ sliderXPercent}%)`, // Right-to-left reveal
+        clipPath: `inset(0 0 0 ${sliderXPercent}%)`, // Adjust the clipPath to reveal from the right
       }}
     >
       {secondMediaContent}
@@ -210,14 +213,14 @@ export const Compare = ({
   ) : (
     <motion.img
       className={cn(
-        "absolute top-0 left-0 z-[19] rounded-2xl w-full h-full select-none",
+        "absolute top-0 right-0 z-[19] rounded-2xl w-full h-full select-none", // Changed to 'right-0' for positioning
         secondMediaClassName
       )}
       alt="second media"
       src={secondMediaContent}
       draggable={false}
       style={{
-        clipPath: `inset(0 0 0 ${100 - sliderXPercent}%)`, // Right-to-left reveal
+        clipPath: `inset(0 0 0 ${100 - sliderXPercent}%)`, // Adjust the clipPath to reveal from the right
       }}
     />
   )}
