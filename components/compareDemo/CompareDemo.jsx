@@ -239,7 +239,7 @@ export function CompareDemo() {
         firstImage="/mainPhoto.png"
         secondMediaContent={<div dir="rtl" className="p-6 text-black h-full flex flex-col justify-center items-start">
           <h1 className="text-3xl">שאדי מטאנס</h1>
-          <div className="text-2xl flex flex-col md:flex-row md:gap-2"><h2>יועץ ומשווק נדל״ן</h2>
+          <div className="text-2xl flex flex-col md:flex-row md:gap-2"><h2>יועץ ומשווק נדל&quotן</h2>
           <h2> באזור חיפה.</h2></div>
           <p>עם שנים של ניסיון וידע מעמיק בשוק המקומי, שאדי מחויב לעזור לך למצוא את הנכס המושלם שמתאים לצרכים שלך. </p>
           <p>בין אם אתה קונה, מוכר או משקיע, שאדי מציע שירות אישי והכוונה מקצועית בכל שלב בדרך. </p>
