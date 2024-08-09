@@ -11,19 +11,9 @@ const wordsGenerate = `עם שנים של ניסיון וידע מעמיק בש�
 
 
 export default function TypewriterEffectSmoothDemo() {
-  const words = [
-    {
-      text: " שאדי",
-    },
-    {
-      text: "מטאנס",
-    },
- 
-  ];
   return (
     <>
-
-      <TypewriterEffectSmooth words={words} className='text-3xl'/>
+      <h3 className='text-3xl'>שאדי מטאנס</h3>
           <div className="text-2xl flex flex-col md:flex-row md:gap-2"><h2>יועץ ומשווק נדל&quot;ן</h2>
           <h2> באזור חיפה.</h2></div>
           <div className="md:w-1/2">
