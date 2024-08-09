@@ -11,7 +11,7 @@ export default function Social() {
         window.location.assign("mailto:shadiEmtanis@gmail.com");
       }
   return (
-    <div className= "social-icons bg-neutral-100 border-neutral-200">
+    <div className= "fixed bottom-0 flex justify-between items-center w-full h-24 px-8 rounded-t-xl  bg-neutral-100 border-neutral-200 max-w-screen-lg m-auto">
     {/* Removed the surrounding divs */}
     <BsTelephoneFill className="iconPhone" onClick={() => window.open("tel:0502136502", "_blank")} />
     <MdEmail className="iconEmail" onClick={sendEmail} />

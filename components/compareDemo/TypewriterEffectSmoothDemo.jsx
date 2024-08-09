@@ -26,7 +26,9 @@ export default function TypewriterEffectSmoothDemo() {
       <TypewriterEffectSmooth words={words} className='text-3xl'/>
           <div className="text-2xl flex flex-col md:flex-row md:gap-2"><h2>יועץ ומשווק נדל&quot;ן</h2>
           <h2> באזור חיפה.</h2></div>
+          <div className="md:w-1/2">
           <TextGenerateEffect words={wordsGenerate} />
+          </div>
           
       </>
    
