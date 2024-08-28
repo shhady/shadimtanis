@@ -1,3 +1,4 @@
+import Social from '@/components/socialMedia/Social'
 import dynamic from 'next/dynamic'
 import { Suspense } from 'react'
 // import '../styles/globals.css'
@@ -14,8 +15,8 @@ export default function page() {
         <CanvasScene />
       </Suspense>
       <div style={{ position: 'absolute', pointerEvents: 'none', top: 0, left: 0, width: '100vw', height: '100vh' }}>
-        <div style={{ position: 'absolute', bottom: 40, right: 20, fontSize: '18px', color:'white' }}>
-        רוג'ה נדאף
+        <div style={{ position: 'absolute', top: 20, right: 20, fontSize: '18px', color:'white' }}>
+        רוג&apos;ה נדאף
           <br />
           ייעוץ / שיווק נדל&quot;ן - חיפה
         </div>
@@ -24,6 +25,7 @@ export default function page() {
           scroll up/down ...
         </a> */}
       </div>
+      <Social />
     </>
   )
 }
