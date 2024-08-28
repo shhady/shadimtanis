@@ -3,7 +3,7 @@
 import * as THREE from 'three'
 import { Canvas, useFrame } from '@react-three/fiber'
 import { Image, Environment, ScrollControls, useScroll, useTexture } from '@react-three/drei'
-import { useRef, useState } from 'react'
+import { useRef, useState, useEffect } from 'react'
 import { easing } from 'maath'
 import './customMaterials'
 
@@ -47,22 +47,51 @@ function Carousel({ radius = 1.4, count = 7 }) {
   ))
 }
 
+
 function Card({ url, ...props }) {
-  const ref = useRef()
-  const [hovered, hover] = useState(false)
-  const pointerOver = (e) => (e.stopPropagation(), hover(true))
-  const pointerOut = () => hover(false)
-  useFrame((state, delta) => {
-    easing.damp3(ref.current.scale, hovered ? 1.15 : 1, 0.1, delta)
-    easing.damp(ref.current.material, 'radius', hovered ? 0.25 : 0.1, 0.2, delta)
-    easing.damp(ref.current.material, 'zoom', hovered ? 1 : 1.5, 0.2, delta)
-  })
-  return (
-    <Image ref={ref} url={url} transparent side={THREE.DoubleSide} onPointerOver={pointerOver} onPointerOut={pointerOut} {...props}>
-      <bentPlaneGeometry args={[0.1, 1, 1, 20, 20]} />
-    </Image>
-  )
-}
+    const ref = useRef()
+    const [hovered, hover] = useState(false)
+    const [isMobile, setIsMobile] = useState(false)
+  
+    // Update the scale based on screen size
+    useEffect(() => {
+      const updateSize = () => {
+        setIsMobile(window.innerWidth <= 768)
+      }
+      window.addEventListener('resize', updateSize)
+      updateSize()
+      return () => window.removeEventListener('resize', updateSize)
+    }, [])
+  
+    const pointerOver = (e) => {
+      e.stopPropagation()
+      hover(true)
+    }
+    
+    const pointerOut = () => hover(false)
+  
+    useFrame((state, delta) => {
+      easing.damp3(ref.current.scale, hovered ? (isMobile ? 0.80 : 1.15) : (isMobile ? 0.75 : 1), 0.1, delta)
+      easing.damp(ref.current.material, 'radius', hovered ? 0.25 : 0.05, 0.2, delta)
+      easing.damp(ref.current.material, 'zoom', hovered ? 1 : 1.5, 0.2, delta)
+    })
+  
+    return (
+      <Image
+        ref={ref}
+        url={url}
+        scale={isMobile ? [0.75, 0.75, 0.75] : [1, 1, 1]} // Scale down for mobile devices
+        transparent
+        side={THREE.DoubleSide}
+        onPointerOver={pointerOver}
+        onPointerOut={pointerOut}
+        {...props}
+      >
+        <bentPlaneGeometry args={[0.1, 1, 1, 20, 20]} />
+      </Image>
+    )
+  }
+  
 
 function Banner(props) {
   const ref = useRef()
