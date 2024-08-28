@@ -67,3 +67,33 @@
     @apply bg-background text-foreground;
   }
 }
+
+body {
+  @apply bg-gray-900 overflow-hidden;
+}
+
+@import url('https://rsms.me/inter/inter.css');
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#__next {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter';
+  background: #fdfdfd;
+  cursor: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE5Ljk2IDE5LjY1MkgzMS45NzFMMjAuOTk2IDE3LjE4VjAuOTk1MTZMMTIuNTggMTUuMThIMC4zMTI0NTZMMTEuNjg2IDE3LjA5VjMxLjA0M0wxOS45NiAxOS42NTJaIiBmaWxsPSIjMzMzMzMzIi8+Cjwvc3ZnPgo='), auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
